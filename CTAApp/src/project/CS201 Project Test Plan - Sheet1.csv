@@ -1,0 +1,17 @@
+Input:,Expected Output,Notes
+Create a station with an int type name,Will have the station name be that number as a string,Technically correct
+Create a station with an string type name,Will name the station that string,Correct input
+"input ""9"" into the menu",will be recogmized as a bad input and asked again,Incorrect Input
+modify an incorrect part of a station,will be recogmized as a bad input and asked again,Incorrect Input
+modify a correct part of a station as expected,Will change that variable in the station instance and in the appropriate arraylist,Correct input
+modify a correct part of a station with an incorrect type,Recognize the type mismatch and reset back to main menu,Incorrect Input
+remove a station that doesn't exist,tell the user station not found and try again,Incorrect Input
+remove a station that exists,properly remove and reindex the rest of the stations,Correct input
+search with name that doesnt exist as station,tell the user station not found and try again,Incorrect Input
+search with name that exists,Tell the user the station information,Correct input
+"Search by mismatched type criteria (wheelchair search by ""4"")",Tell the user there is a type mismatch and restart from menu,Incorrect Input
+Search by correct type,Returns all stations that have that variable of the search part of a station,Correct input
+search by part of a station that doesn't exist (ex. elevation),Tells the user that that part of a station info doesn't exist,Incorrect Input
+Find nearest station with |lat| >90 or |long| >180,Tell the user nothing exists based on those lat/long,Incorrect Input
+Find nearest station with proper lat/long,Return the closest station,correct input
+"input ""8"" into the menu",properly exit the program,correct input

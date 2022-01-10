@@ -1,0 +1,42 @@
+Design:
+
+User interface will be multiple options each with a number attached. The user will choose the number attached to 
+the action they would like to perform
+For example:
+	Please select the action you would like to take below
+		1: Add Station
+		2: Modify Station
+		3: Remove Station
+		4: Search With Name
+		5: Search By Criteria
+		6: Find Nearest Station
+		7: Generate Path
+		8: Exit
+
+Read input files using a File Reading Scanner, which will be set up to read the input file. Reading it will be using
+nextLine functions and conditions to make sure that it is the correct information that I want it to be 
+(i.e. not reading station name when I want the stops)
+
+Process the data using the readLines as mentioned above and pass them through a method in the applicationclass
+that will return an arraylist of the read lines from the input file. This will be used inside a read_from_frile function
+that will take care of all of these processes in the main method
+
+As above, will store data inside arraylists. There will be one for each part of a station (name, color, stop, etc.)
+along with one that will keep all of the station classes inside it (it will be a station[] type arraylist)
+
+add/delete/modify data primarily through the functions built into arraylists. For modifying the values of stations 
+in the station arraylist, we will use "set" methods in the station class to change them.
+
+Searching data will be dependent on what or how I am searching. If it is just looking for a station name, it will
+look through the name arraylist to find which index it is tied to, then find that station in the station arraylist
+
+Classes Needed:
+	Scanner - for user input and reading files
+	arraylists - for storing the data
+	Station - will be the primary class of our application. Stores the information for each station in the input file
+	or given by the user. will be used in conjunction with our individual data arraylists to properly store and organize
+	information that will be used by the program and observable by the user.
+	Route - A set of 2 way paths(see below) that connects two stops from more than 2 stops away from each other
+	Path(Route) - A subclass of Route that is used solely for a 2 stop system. It does not keep track of the 
+	individual stops in between those 2, it can also only be between 2 stops of the same color unless there is
+	a station that has both colors as one of the two stops
